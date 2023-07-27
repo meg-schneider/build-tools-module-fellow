@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 
 // uncomment the below for proxy challenge
-/*
+
 const leaderList = [
   {name: 'Anna', id: 'a0'},
   {name: 'Ben', id: 'b0'},
@@ -14,7 +14,7 @@ const leaderList = [
 app.get('/api/leaders', (req, res) => {
   return res.status(200).send(leaderList);
 });
-*/
+
 
 // statically serve everything in the build folder on the route '/build'
 app.use('/build', express.static(path.join(__dirname, '../build')));
